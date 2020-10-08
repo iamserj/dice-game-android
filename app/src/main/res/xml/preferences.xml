@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<SwitchPreferenceCompat
+			android:defaultValue="true"
+			android:key="switch_sound"
+			android:summary="Use sound on the dice roll"
+			android:title="Enable sound"
+			app:icon="@drawable/ic_baseline_music_note_24_2"
+			android:icon="@drawable/ic_baseline_music_note_24_2" />
+
+	<SwitchPreferenceCompat
+			android:defaultValue="true"
+			android:key="switch_vibration"
+			android:summary="Use vibration on the dice roll"
+			android:title="Enable vibration"
+			app:icon="@drawable/ic_baseline_vibration_24_2"
+			android:icon="@drawable/ic_baseline_vibration_24_2" />
+
+	<SwitchPreferenceCompat
+			android:defaultValue="true"
+			android:key="switch_summary_result"
+			android:summary="Show the sum of the dice at the bottom"
+			android:title="Show summary result"
+			app:icon="@drawable/ic_baseline_add_24_2"
+			android:icon="@drawable/ic_baseline_add_24_2" />
+
+	<SwitchPreferenceCompat
+			android:defaultValue="true"
+			android:key="switch_shake_roll"
+			android:summary="Use this option to roll the dice by phone shake"
+			android:title="Enable roll by shake"
+			app:icon="@drawable/ic_baseline_screen_rotation_24_2"
+			android:icon="@drawable/ic_baseline_screen_rotation_24_2" />
+
+	<SwitchPreferenceCompat
+			android:defaultValue="true"
+			android:key="switch_red_dice"
+			android:summary="Use default red dice set. Disable this option to use colored dice set"
+			android:title="Red dice"
+			app:icon="@drawable/ic_baseline_color_lens_24_2"
+			android:icon="@drawable/ic_baseline_color_lens_24_2" />
+
+</PreferenceScreen>

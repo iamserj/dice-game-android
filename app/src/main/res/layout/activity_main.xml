@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:paddingTop="24dp"
+		android:background="@drawable/wood_bg"
+		tools:context=".MainActivity">
+
+
+	<!-- Top dice image and settings icon -->
+	<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.1">
+
+		<!-- Top dice image -->
+		<ImageView
+				android:id="@+id/iv_topDice"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:alpha="0.95"
+				android:contentDescription="@string/cd_diceLogo"
+				android:paddingTop="56dp"
+				android:src="@drawable/dice_top_image" />
+
+		<!-- Settings icon -->
+		<ImageView
+				android:id="@+id/iv_settings"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="top|right"
+				android:contentDescription="@string/cd_settingsButton"
+				android:padding="16dp"
+				android:src="@drawable/ic_settings_gray_32dp" />
+	</FrameLayout>
+
+	<!-- Central area -->
+	<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.5">
+
+		<!-- Roll it button -->
+		<Button
+				android:id="@+id/btn_roll"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:shadowColor="#000000"
+				android:text="@string/bt_text_rollIt"
+				android:textSize="24sp" />
+
+		<!-- Shake phone hint -->
+		<TextView
+				android:id="@+id/tv_shakeHint"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/btn_roll"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="8dp"
+				android:text="@string/tv_shakePhoneHint"
+				android:textColor="@android:color/darker_gray"
+				android:textSize="12sp" />
+
+	</RelativeLayout>
+
+	<!-- Dice and total score -->
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+
+			android:layout_marginBottom="24dp"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:orientation="vertical">
+
+		<!-- Dice -->
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_marginTop="16dp"
+				android:layout_weight="0.75"
+				android:orientation="horizontal"
+				android:paddingStart="24dp"
+				android:paddingLeft="24dp"
+				android:paddingEnd="24dp"
+				android:paddingRight="24dp">
+
+			<!-- Die left -->
+			<ImageView
+					android:id="@+id/iv_dieLeft"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="1"
+					app:srcCompat="@drawable/die_red_1" />
+
+			<!-- Die right -->
+			<ImageView
+					android:id="@+id/iv_dieRight"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="1"
+					app:srcCompat="@drawable/die_red_2" />
+
+		</LinearLayout>
+
+		<!-- Total score text -->
+		<TextView
+				android:id="@+id/tv_result"
+				android:layout_width="wrap_content"
+				android:layout_height="0dp"
+				android:layout_marginTop="8dp"
+				android:layout_weight="0.25"
+				android:text=""
+				android:textColor="@android:color/white"
+				android:textSize="16sp"
+				tools:text="12">
+
+		</TextView>
+
+	</LinearLayout>
+</LinearLayout>

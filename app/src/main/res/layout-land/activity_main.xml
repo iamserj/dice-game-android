@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:paddingTop="24dp"
+		android:paddingEnd="24dp"
+		android:paddingRight="24dp"
+		android:background="@drawable/wood_bg"
+		tools:context=".MainActivity">
+
+
+	<!-- Settings icon -->
+	<ImageView
+			android:id="@+id/iv_settings"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="top|right"
+			android:contentDescription="@string/cd_settingsButton"
+			android:paddingTop="16dp"
+			android:paddingEnd="16dp"
+			android:paddingRight="16dp"
+			android:src="@drawable/ic_settings_gray_32dp" />
+
+	<!-- Dice -->
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:paddingLeft="64dp"
+			android:paddingStart="64dp"
+			android:paddingRight="64dp"
+			android:paddingEnd="64dp"
+			android:layout_weight="0.7"
+			android:orientation="horizontal">
+
+		<!-- Die left -->
+		<ImageView
+				android:id="@+id/iv_dieLeft"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_marginStart="64dp"
+				android:layout_marginLeft="64dp"
+				android:layout_weight="1"
+				app:srcCompat="@drawable/die_red_1" />
+
+		<!-- Die right -->
+		<ImageView
+				android:id="@+id/iv_dieRight"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_marginEnd="64dp"
+				android:layout_marginRight="64dp"
+				android:layout_weight="1"
+				app:srcCompat="@drawable/die_red_2" />
+
+	</LinearLayout>
+
+	<!-- Bottom dice images, total score, roll it button, text hint -->
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="0.8"
+			android:orientation="horizontal">
+
+		<!-- Bottom dice image left -->
+		<ImageView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_gravity="bottom"
+				android:layout_marginBottom="16dp"
+				android:layout_weight="0.5"
+				android:alpha="0.9"
+				android:scaleType="fitStart"
+				android:scaleX="0.5"
+				android:scaleY="0.5"
+				app:srcCompat="@drawable/dice_pic_123" />
+
+		<!-- Total score, roll it button, text hint -->
+		<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginBottom="16dp"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+			<!-- Total score -->
+			<TextView
+					android:id="@+id/tv_result"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:text=""
+					android:textColor="@android:color/white"
+					android:textSize="20sp"
+					tools:text="88">
+
+			</TextView>
+
+			<!-- Roll it button -->
+			<Button
+					android:id="@+id/btn_roll"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:layout_marginTop="16dp"
+					android:shadowColor="#000000"
+					android:text="@string/bt_text_rollIt"
+					android:textSize="28sp" />
+
+			<!-- Hint text -->
+			<TextView
+					android:id="@+id/tv_shakeHint"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:layout_marginTop="8dp"
+					android:text="@string/tv_shakePhoneHint"
+					android:textColor="@android:color/darker_gray"
+					android:textSize="14sp" />
+		</LinearLayout>
+
+		<!-- Bottom dice image right -->
+		<ImageView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_gravity="bottom"
+				android:layout_marginBottom="16dp"
+				android:layout_weight="0.5"
+				android:alpha="0.9"
+				android:scaleType="fitEnd"
+				android:scaleX="0.5"
+				android:scaleY="0.5"
+				app:srcCompat="@drawable/dice_pic_456" />
+
+	</LinearLayout>
+</LinearLayout>

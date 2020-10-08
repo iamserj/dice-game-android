@@ -1,0 +1,7 @@
+<resources>
+	<string name="app_name">Dice</string>
+	<string name="cd_diceLogo">Cubes logo</string>
+	<string name="cd_settingsButton">Settings button</string>
+	<string name="bt_text_rollIt">Roll it!</string>
+	<string name="tv_shakePhoneHint">or shake the phone</string>
+</resources>
